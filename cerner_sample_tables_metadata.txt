@@ -1,0 +1,115 @@
+TABLE : ADDRESS				Description:  Address							
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++					
+ACTIVE_IND					NUMBER		The table row is active or inactive.  A row is generally active unless it is in an							
+ACTIVE_STATUS_CD			NUMBER		Indicates the status of the row itself (not the data in the row) such as  active,							
+ACTIVE_STATUS_DT_TM			DATE		The date and time that the active_status_cd was set.							
+ACTIVE_STATUS_PRSNL_ID		NUMBER		The person who caused the active_status_cd to be set or change.							
+ADDRESS_FORMAT_CD			NUMBER		Address format code identifies the format to apply to the given address.  (Future							
+ADDRESS_ID					NUMBER		The address ID is the primary key of the address table.							
+ADDRESS_INFO_STATUS_CD		NUMBER		The current status of the address. An example would be   'Incorrect Address'.							
+ADDRESS_TYPE_CD				NUMBER		The address type is the code set value  which identifies the type of address							
+ADDRESS_TYPE_SEQ			NUMBER		This is the numeric sequence that determines the priority or precedence that							
+BEG_EFFECTIVE_DT_TM			DATE		The date and time for which this table row becomes effective.  Normally, this							
+BEG_EFFECTIVE_MM_DD			NUMBER		The numeric representation of  the month and day of the month for which this							
+CITY						VC2(100)	The city field is the text name of the city associated with the address row.							
+CITY_CD						NUMBER		The city code is the code set value which identifies the city for the address							
+COMMENT_TXT					VC2(200)	Comment giving additional information about the address.							
+CONTACT_NAME				VC2(200)	The primary person or contact for this address.							
+CONTRIBUTOR_SYSTEM_CD		NUMBER		Contributor system identifies the source feed of data from which a row was							
+COUNTRY						VC2(100)	The country field is the text name of the country associated with the address							
+COUNTRY_CD					NUMBER		The country code is the code set value which identifies the country for the							
+COUNTY						VC2(100)	The county field is the text name of the county associated with the address							
+COUNTY_CD					NUMBER		The county code is the code set value which identifies the county for the							
+DATA_STATUS_CD				NUMBER		Data status indicates a level of authenticity of the row data.  Typically this							
+DATA_STATUS_DT_TM			DATE		The date and time that the data_status_cd was set.							
+DATA_STATUS_PRSNL_ID		NUMBER		The person who caused the data_status_cd to be set or change.							
+DISTRICT_HEALTH_CD			NUMBER		This will hold the code_value of the District Health Authority.							
+END_EFFECTIVE_DT_TM			DATE		The date/time after which the row is no longer valid as active current data.							
+END_EFFECTIVE_MM_DD			NUMBER		The numeric representation of  the month and day of the month for which this							
+LONG_TEXT_ID				NUMBER								
+MAIL_STOP					VC2(100)	Currently used internally by Cerner only.  Identifies a Cerner organization							
+OPERATION_HOURS				VC2(255)	freetext entry specifying the days and hours that this address is valid							
+PARENT_ENTITY_ID			NUMBER		The value of the primary identifier of the table to which the address row is							
+PARENT_ENTITY_NAME			VC2(32)		The upper case name of the table to which this address row is related (i.e.,							
+POSTAL_BARCODE_INFO			VC2(100)	This contains Postal Barcode Information of the address. (future use)							
+POSTAL_IDENTIFIER			VC2(100)	Stores Post Office address file key for the UK.							
+POSTAL_IDENTIFIER_KEY		VC2(100)	Stores a version of  column Postal Identifier with all the spaces removed and							
+PRIMARY_CARE_CD				NUMBER		This will hold the code_value of the Primary Care Trust.							
+RESIDENCE_CD				NUMBER		The residence code is the code set value which identifies a geographic area							
+RESIDENCE_TYPE_CD			NUMBER		The residence type code is a code set value which describes key physical  characte							
+SOURCE_IDENTIFIER			VC2(255)	Identifier assigned from a master system to this row.  Added to support he							
+STATE						VC2(100)	The state field is the text name of the state or province associated with the							
+STATE_CD					NUMBER		The state code is the code set value which identifies the state or province							
+STREET_ADDR					VC2(100)	This is the first line of the street address.							
+STREET_ADDR2				VC2(100)	This is the second line of the street address.							
+STREET_ADDR3				VC2(100)	This is the third line of the street address.  The third line of the street							
+STREET_ADDR4				VC2(100)	This is the fourth line of the street address.  The fourth line of the street							
+UPDT_APPLCTX				NUMBER		The application context number from the record info block.							
+UPDT_CNT					NUMBER		Set to 0 on insert.  Incremented by 1 on update.  Used to recognize update							
+UPDT_DT_TM					DATE		The date and time the row was last inserted or updated.							
+UPDT_ID						NUMBER		The person_id of the person from the personnel table (prsnl) that caused the							
+UPDT_TASK					NUMBER		The registered (assigned) task number for the process that inserted or updated							
+VALIDATION_EXPIRE_DT_TM	DATE			The time in which the address validation expires.							
+ZIP_CODE_GROUP_CD			NUMBER		This field contains the postal code for the street address in the address row.							
+ZIPCODE						VC2(25)		Zipcode key field converted to nls format for internationalization and search							
+ZIPCODE_KEY					VC2(25)		This contains the code set value for a zip code group. (future use)							
+
+
+TABLE : ENCNTR_CLIN_REVIEW	Description:  Encounter Clinical Review
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+CLINICAL_REVIEW_ID			NUMBER		The identifier that links multiple clinical reviews together.
+CONTENT_SOURCE_CD			NUMBER		The source of the review content.
+CONTENT_VERSION_CD			NUMBER		Contains the content version code.
+ENCNTR_CLIN_REVIEW_ID		NUMBER		The unique primary key for this table. It is an internally generated number.
+ENCNTR_ID					NUMBER		The Encounter ID of the encounter to be reviewed.
+EPISODE_IDENT				VC2(100)	Identifies the related episode for the review.
+RESULT_XML_LONG_TEXT_ID		NUMBER		uniquely identifies the related XML text.
+REVIEW_COMMENT_ID			NUMBER		The date and time of when the clinical review occurred.		
+REVIEW_RESULT_CD			NUMBER		The comments that pertain to the review as a whole.
+REVIEW_STATUS_CD			NUMBER		The result of the clinical review.	
+REVIEW_SUB_TYPE				VC2(255)	The status of the clinical review.	
+REVIEW_SUB_TYPE_ID			NUMBER		The sub type of clinical review needed for the given encounter. Column is
+REVIEW_TYPE_CD				NUMBER		The type of clinical review needed for the given encounter.	
+REVIEW_TYPE_UNIT_VALUE		NUMBER		The numeric unit value for the review type.  For example, the type is
+REVIEWED_DT_TM				DATE		
+TRANSMITTED_DT_TM			DATE		The date and time the review was transmitted by fax, email, etc. Column is
+UPDT_APPLCTX				NUMBER		The application context number from the record info block.
+UPDT_CNT					NUMBER		Set to 0 on insert.  Incremented by 1 on update.  Used to recognize update
+UPDT_DT_TM					DATE		The date and time the row was last inserted or updated.
+UPDT_ID						NUMBER		The person_id of the person from the personnel table (prsnl) that caused the
+UPDT_TASK					NUMBER		The registered (assigned) task number for the process that inserted or u
+VERSION_DT_TM				DATE		The version date and time marks the date the record became historical.
+
+
+TABLE : SHX_ACTION    Description:  SHX_ACTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ACTION_DT_TM				DATE		Action taken date and time
+ACTION_TYPE_MEAN			VC2(12)		Indicates the type of entry on the social history personnel relation table. it
+ACTION_TZ					NUMBER		Action taken date time zone
+ACTIVE_IND					NUMBER		The table row is active or inactive.  A row is generally active unless it is
+BEG_EFFECTIVE_DT_TM			DATE		The date and time for which this table row becomes effective.  Normally, this
+END_EFFECTIVE_DT_TM			DATE		The date/time after which the row is no longer valid as active current data
+PRSNL_ID					NUMBER		This is the value of the unique primary identifier of the person
+SHX_ACTION_ID				NUMBER		the table's primary key.  the unique identifier for a shx_action table.
+SHX_ACTIVITY_GROUP_ID		NUMBER		ACTIVITY GROUP ID FROM THE SHX_ACTIVITY table
+SHX_ACTIVITY_ID				NUMBER		The application context number from the record info block.
+UPDT_APPLCTX				NUMBER		
+UPDT_CNT					NUMBER		Set to 0 on insert.  Incremented by 1 on update.  Used to recognize update
+UPDT_DT_TM					DATE		The date and time the row was last inserted or updated.
+UPDT_ID						NUMBER		The person_id of the person from the personnel table (prsnl) that caused the
+UPDT_TASK					NUMBER		The registered (assigned) task number for the process that inserted or updated	
+
+TABLE : SHX_ALPHA_RESPONSE    Description:  SHX_ALPHA_RESPONSE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ACTIVE_IND					NUMBER		The table row is active or inactive.  A row is generally active unless it is
+BEG_EFFECTIVE_DT_TM			DATE		The date and time for which this table row becomes effective.
+END_EFFECTIVE_DT_TM			DATE		The date/time after which the row is no longer valid as active current data.		
+NOMENCLATURE_ID				NUMBER		This is the value of the unique primary identifier of the nomenclature table.
+OTHER_TEXT					VC2(255)	Indicates the type of entry on the SHX_ RESPONSE table.
+SHX_ALPHA_RESPONSE_ID		NUMBER		SEQUENCE NAME:SHX_SEQ
+SHX_RESPONSE_ID				NUMBER		XFK1SHX_ALPHA_RESPONSE
+UPDT_APPLCTX				NUMBER		The application context number from the record info block.	
+UPDT_CNT					NUMBER		Set to 0 on insert.  Incremented by 1 on update.  Used to recognize update
+UPDT_DT_TM					DATE		The date and time the row was last inserted or updated.
+UPDT_ID						NUMBER		The person_id of the person from the personnel table (prsnl) that caused the
+UPDT_TASK					NUMBER		The registered (assigned) task number for the process that inserted 
